@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+:root{
+    /* root is used for creating global variables */
+    --roshan:#c51e65;
+}
+@font-face {
+    font-family:Comic;
+    src: url(./Comic\ Jungle\ Extrude.ttf);
+}
+@font-face {
+    font-family: Urban Shadow;
+    src: url(./Urban\ Shadow\ Script.otf);
+}
+body{
+    height: 100vh; 
+    background-image: url(./pack-colorful-cardboard-sheets-with-copy-space.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.logo>span{
+    font-size: 60px;
+    letter-spacing: 20px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: auto;
+    padding: 50px 0px;
+    font-family: Comic;
+}
+.nav>ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+}
+.nav>ul>li:hover{
+    background-color: blue;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 1s ease-in-out;
+    
+}
+.nav>ul>li>a{
+    font-size: 42px;
+    
+}
+/* Banner starts here */
+#banner{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: auto;
+    height: 600;
+}
+#banner>.right>img{
+    height: 500px;
+    width: 600px;
+    border-radius: 40px;
+    box-shadow: 2px 3px red;
+    mix-blend-mode: multiply;
+}
+#banner>.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: Comic;
+    padding: 18px;
+}
+#banner>.left>.buttons>button:hover{
+    background-color: blue;
+    transition: all 1s ease;
+}
+.badge{
+    color: black;
+    width: max-content;
+    background-color:  palevioletred;
+    border-radius: 30px;
+    padding: 10px;
+    font-family: Comic;
+    letter-spacing: 5px;
+}
+.left>h2{
+    font-size: 78px;
+    letter-spacing: 25px;
+    
+}
+.left>h2>span{
+    font-size: 82px;
+    letter-spacing: 10px;
+    
+}
+.left>h2+p{
+    font-size: 32px;
+    letter-spacing: 5px;
+}
+button{
+    padding: 20px;
+    border-radius: 20px;
+    color: darkblue;
+    background-color: burlywood;
+    font-family: Urban Shadow;
+    border: none;
+}
+/* Banner ends here */
+footer{
+    text-align: center;
+    padding: 50px 0px;
+    font-family: Urban Shadow;
+}
+header>div>span{
+    color: var(--roshan) ;
+    letter-spacing: 5px;
+}
