@@ -17,11 +17,11 @@
     src: url(./Urban\ Shadow\ Script.otf);
 }
 body{
-    height: 100vh; 
-    background-image: url(./pack-colorful-cardboard-sheets-with-copy-space.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    height: 100vh;
+    /* background-image: url(./pack-colorful-cardboard-sheets-with-copy-space.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* background-size: cover; */
 
 }
 .logo>span{
@@ -34,7 +34,7 @@ header{
     align-items: center;
     max-width: 1280px;
     margin: auto;
-    padding: 50px 0px;
+    padding: 20px 0px;
     font-family: Comic;
 }
 .nav>ul{
@@ -63,7 +63,6 @@ a{
     justify-content: space-between;
     max-width: 1280px;
     margin: auto;
-    height: 600;
 }
 #banner>.right>img{
     height: 500px;
@@ -123,4 +122,115 @@ footer{
 header>div>span{
     color: var(--roshan) ;
     letter-spacing: 5px;
+}
+/* Media quueries */
+@media (max-width:1287px){
+    #banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    #banner>.left{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+}
+@media (max-width:1160px){
+    header{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+@media (max-width:670px){
+    #banner>.left>h2>span{
+        font-size: 50px;
+     }
+      #banner>.left>h2{
+        font-size: 50px;
+        
+    }
+}
+@media (max-width:654px){
+    header>.logo>span{
+        font-size: 35px;
+    }
+    #banner>.left>h2+p{
+        font-size: 20px;
+    }
+}
+@media (max-width:600px){
+    #banner>.right>img{
+        width: 400px;
+        height: 400px;
+    }
+}
+@media (max-width:507px){
+    header>.logo>span{
+        font-size: 20px;
+    }
+    header>.nav>ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #banner>.left>h2>span{
+        font-size: 15px;
+     }
+      #banner>.left>h2{
+        font-size: 15px;    
+    }
+     #banner>.left>h2+p{
+        font-size: 15px;
+
+    }
+}
+@media (max-width:418px){
+     header>.logo>span{
+        font-size: 15px;
+    }
+     #banner>.right>img{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width:389px){
+    header>.logo>span{
+        font-size: 28px;
+        letter-spacing: 5px;
+    }
+    header>.logo{
+        height: 10px;
+     }
+    header{
+        
+     }
+    header>.nav>ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header>.nav>ul>li>a{
+        font-size: 14px;
+    }
+    #banner>.left>h2>span{
+        font-size: 15px;
+
+     }
+      #banner>.left>h2{
+        font-size: 15px;
+        text-align: center;   
+    }
+     #banner>.left>h2+p{
+        font-size: 15px;
+        text-align: center;
+
+    }
 }
