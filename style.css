@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 25px;
+    transition: all 0.5s ease-in;
+    scroll-behavior: smooth;
 }
 :root{
     /* root is used for creating global variables */
@@ -18,10 +20,11 @@
 }
 body{
     height: 100vh;
-    /* background-image: url(./pack-colorful-cardboard-sheets-with-copy-space.jpg); */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
-    /* background-size: cover; */
+    background-image: url(./pack-colorful-cardboard-sheets-with-copy-space.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover; 
 
 }
 .logo>span{
@@ -70,6 +73,10 @@ a{
     border-radius: 40px;
     box-shadow: 2px 3px red;
     mix-blend-mode: multiply;
+}
+#banner>.right>img:hover{
+    transform: rotate(360deg);
+    transition: all 1s ease-in;
 }
 #banner>.left{
     display: flex;
@@ -146,6 +153,7 @@ header>div>span{
         flex-direction: column;
         gap: 30px;
     }
+    
 }
 @media (max-width:670px){
     #banner>.left>h2>span{
@@ -233,4 +241,268 @@ header>div>span{
         text-align: center;
 
     }
+}
+/* about starts here */
+.outerabout{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+   
+}
+.aboutleft>img{
+    clip-path: circle();
+    height: 400px;
+    
+}
+.aboutleft>img:hover{
+    transition: all 1s ease-in;
+    transform: rotateX(360deg);
+}
+#about>h3>span:hover{
+    background-color: darkblue;
+    transition: all 1s ease-in;    
+}
+#about>h3>span{
+    font-family: comic;
+    font-size: 42px;
+    letter-spacing: 15px;
+    color: var(--roshan);
+}
+#about{
+ max-width: 1280px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 50px;
+    
+    
+}
+.aboutright>p{
+    font-family: comic;
+    font-size: 32px;
+}
+
+/* about ends here */
+/* Skills start here */
+#skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1280px;
+    margin: auto;
+    
+}
+#skills>.headskills{
+    font-size: 32px;
+    font-family: Comic;
+    color: var(--roshan);
+    letter-spacing: 15px;
+    padding: 60px;
+
+}
+.skillsparent{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 30px;
+    column-gap: 120px;
+}
+.sk-img{
+    height: 100px;
+    width: 190px;
+}
+.sk-img:hover{
+    transform: rotate(180deg);
+    transition: all 0.5s ease-in;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    /* Skills ends here */
+    /* Project starts here */
+#projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1280px;
+    margin: auto;
+} 
+.outerpro{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 30px;
+} 
+ 
+ #projects>h3{
+        font-family: Comic;
+        color: var(--roshan);
+        letter-spacing: 15px;
+        font-size: 40px;
+        padding: 40px;
+    }
+.pro>img+h3{
+    font-family: Comic;
+}    
+.pro>img{
+      height: 300px;
+      width: 300px;
+      clip-path: circle();
+}
+.pro>img:hover{
+    transition: all 1s ease-in;
+    transform: rotate(360deg);
+}
+.pro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.pro>button:hover{
+    background-color: darkblue;
+    transition: all 1s ease-in;
+}
+
+    /* projects ends here */
+    /* contact starts here */
+#contact{
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}   
+#contact>h3{
+    color: var(--roshan);
+    padding: 50px;
+    font-size: 40px;
+    font-family: comic;
+    letter-spacing: 15px;
+} 
+.for{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pad{
+    width: 50vw;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px 20px;
+}
+textarea{
+    width: 50vw;
+    height: 100px;
+    resize: none
+}
+button{
+  width: max-content;
+  align-self: center;
+}
+button:hover{
+    background-color: lightblue;
+    transition: all 1s ease-in;
+}
+.for{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+    /* contact ends here */
+@media (max-width:1200px){
+    .outerabout{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .aboutright>p{
+        font-size: 25px;
+        text-align: center;
+    }
+}
+@media (max-width:470px){
+    #about>h3>span{
+        font-size: 20px;  
+        letter-spacing: 7px; 
+    }
+}
+@media (max-width:370){
+     #about>h3>span{
+        font-size: 7px;   
+    }
+}
+/* skills media query */
+@media (max-width:1100px){
+    .skillsparent{
+       grid-template-columns: repeat(3,1fr);
+       column-gap: 20px;
+    }
+}
+@media (max-width:500px){
+    .skillsparent{
+       grid-template-columns: repeat(2,1fr);
+       column-gap: 10px;
+    }
+}
+@media (max-width:350px){
+    .skillsparent{
+       grid-template-columns: repeat(1,1fr);
+    }
+    #skills>.headskills{
+        font-size: 20px;
+    }
+}
+/* projects media query  */
+@media (max-width:920px){
+    .pro>img{
+      height: 150px;
+      width: 150px;
+}
+}
+@media (max-width:550px){
+    .pro>img+h3{
+    text-align: center;
+}
+.pro>img{
+      height: 80px;
+      width: 80px;
+}
+ #projects>h3{
+     font-size: 20px;
+     letter-spacing: 10px;
+ }
+ .outerpro{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 15px;
+}   
+}
+@media (max-width:400px){
+     .outerpro{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 11px;
+}   
+}
+/* contact media query  */
+@media (max-width:700px){
+    .pad{
+        width: 300px;
+    }
+    textarea{
+        width: 300px;
+    }
+}
+@media (max-width:450px){
+    #contact>h3{
+    color: var(--roshan);
+    font-size: 20px;
+    letter-spacing: 10px;
+} 
 }
